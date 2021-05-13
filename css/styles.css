@@ -181,7 +181,7 @@ p.bolder {
 }
 /** Media Queries **/
 
-@media (max-width:360px){
+@media (max-width:500px){
   .premiun{
     flex-direction: column;
   }
@@ -211,5 +211,12 @@ p.bolder {
   }
   .free-rigth{
     width: 100%;
+  }
+  .nav{
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav li{
+    border-bottom: 1px solid #808080;
   }
 }
