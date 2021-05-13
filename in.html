@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>InformacionCOINCPEIN</title>
+	<script>
+		function informacion(){
+					var cuentas=1000;
+
+
+					for(i=1; i<=5; i++){
+
+			cuentas = prompt("Por favor selecciona una cuenta de las disponibles para recibir tus 50 coins de regalo\n1000\n	1001\n	1002\n	1003");
+
+			if (cuentas>=1000 && cuentas<=1003){
+
+				alert("SU CUENTA ES:\t"+cuentas+"\t Es necesario verificar tu cuenta por WhatsApp, al presionar ok seras dirigido a WhatsApp para la confirmación de tu cuenta.");
+
+
+				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta )";
+
+
+}
+
+else{
+
+	alert("Uffff necesitas elegir una cuenta de las disponibles!!!, click en +informacion");
+}
+	
+}
+
+}
+
+//+informacion
+
+function cambiar_coins(){
+
+	
+
+var cuentas=1000;
+              
+            
+              
+			cuentas = prompt("Por favor selecciona una cuenta de las disponibles para recibir tus 50 coins de regalo\n1000\n	1001\n	1002\n	1003");
+
+
+			if (cuentas>=1000 && cuentas<=1003){
+
+		alert("SU CUENTA ES:\t"+cuentas+"\t Serás redirigido a WhatsApp, ya que necesitamos confirmar tu cuenta.");
+				alert("Se han abonado 50 coins a tu cuenta");
+
+				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta ) confirmo que ya recibi mis 50 coins";
+		
+}
+
+	
+else{
+
+	alert("Uffff necesitas elegir una cuenta de las disponibles!!!, click en Recibir coins.");
+
+
+	}
+
+
+
+}
+
+function noregistro(){
+
+var mensajes1=1000;
+
+	mensajes1 =confirm ("Favor de registrarse para acceder a los cursos.");
+
+    if (mensajes1=true) {
+    	
+              
+            
+		alert("SU CUENTA ES:\t"+"\t Serás redirigido a WhatsApp, ya que necesitamos confirmar tu cuenta.");
+
+				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta ) confirmo que ya recibi mis 50 coins";
+
+
+    }
+    //llave if
+
+}
+//llave funcion
+
+//cambiar_coins
+	</script>
+
+
+	<style>
+		
+		.but{
+		
+			background-color:red;
+			color:yellow;
+		}
+
+
+	table{
+			border-color:yellow;
+			 border-spacing: 10px 5px;
+			 border-right:yellow;
+
+		}
+
+    
+		* {
+				margin:0px;
+				padding:0px;
+			}
+			
+			#header {
+				margin:auto;
+				width:500px;
+				font-family:Arial, Helvetica, sans-serif;
+			}
+			
+			ul, ol {
+				list-style:none;
+			}
+			
+			.nav > li {
+				float:left;
+			}
+			
+			.nav li a {
+				background-color:#000;
+				color:#fff;
+				text-decoration:none;
+				padding:10px 12px;
+				display:block;
+			}
+			
+			.nav li a:hover {
+				background-color:#434343;
+			}
+			
+			.nav li ul {
+				display:none;
+				position:absolute;
+				min-width:140px;
+			}
+			
+			.nav li:hover > ul {
+				display:block;
+			}
+			
+			.nav li ul li {
+				position:relative;
+			}
+			
+			.nav li ul li ul {
+				
+				top:0px;
+			}
+     button{
+     	background: blue;
+     	color:white;
+     }
+
+	</style>
+
+
+</head>
+
+
+	
+
+<body>
+
+
+
+
+	 <h1 align="center">Área de coins</h1>
+	 <br> 
+	 
+		<div id="header" align="right">
+			<ul class="nav">
+				<li><a href="https://equipodeb.github.io/CPEINMX/">Inicio</a></li>
+				<li><a href="">Cursos</a>
+					<ul>
+
+						<li><a href="#">Gratuitos y de paga:</a></li>	
+						<li><a onclick="noregistro()">HTML</li>
+						<li><a onclick="noregistro()">CSS</a></li>
+						<li><a onclick="noregistro()">JAVASCRIPT</a></li>
+						<li><a href="">No gratuitos:</a>
+							<ul>
+								<li><a href=""onclick="noregistro()">GIT</a></li>
+								<li><a href=""onclick="noregistro()">GITHUB</a></li>
+								<li><a href=""onclick="noregistro()">React</a></li>
+								<li><a href=""onclick="noregistro()">MYSQL</a></li>
+							</ul>
+						</li>
+					</ul>
+				</li>
+				<li><a href="faq.html">Preguntas frecuentes</a>
+					
+			
+				</li>
+				<li><a href="Canjear.html">Canjear Coins </a></li>
+			</ul>
+		</div>
+
+
+	<div align="center">
+<br><br><br>
+ <table border="5"><tr><td align="center"><strong >¿Que son los coins?</strong><br><img src="coins.png" width="500" height="250"> 
+ 	<br>
+
+ 	Los coins son puntos abonados electronicamente a tu cuenta CPEIN. 
+<br>
+<button onclick="informacion()">+informacion</button>
+<tr><td align="center"><strong ><br><br> ¿En qué puedo utilizarlos?</strong><br><img src="carrito.png" width="700" height="350"> <br>
+
+	
+ 	Los puedes utilizar para clases en vivo, o venderlos a otros usuarios.
+ 	 	<br>
+<button onclick="cambiar_coins()">Recibir coins</button>
+
+
+   
+<br>
+
+ 
+
+ </td></tr> 	
+
+
+
+
+
+ </td></tr></table>		
+
+
+ 
+
+	</div>
+
+
+
+
+
+</body>
+</html>
