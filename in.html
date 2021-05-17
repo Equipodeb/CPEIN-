@@ -3,91 +3,65 @@
 <head>
 	<meta charset="utf-8">
 	<title>InformacionCOINCPEIN</title>
-	<script>
-		function informacion(){
-					var cuentas=1000;
-
-
-					for(i=1; i<=5; i++){
-
-			cuentas = prompt("Por favor selecciona una cuenta de las disponibles para recibir tus 50 coins de regalo\n1000\n	1001\n	1002\n	1003");
-
-			if (cuentas>=1000 && cuentas<=1003){
-
-				alert("SU CUENTA ES:\t"+cuentas+"\t Es necesario verificar tu cuenta por WhatsApp, al presionar ok seras dirigido a WhatsApp para la confirmación de tu cuenta.");
-
-
-				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta )";
-
-
-}
-
-else{
-
-	alert("Uffff necesitas elegir una cuenta de las disponibles!!!, click en +informacion");
-}
-	
-}
-
-}
-
-//+informacion
-
-function cambiar_coins(){
-
+<script>
 	
 
-var cuentas=1000;
-              
-            
-              
-			cuentas = prompt("Por favor selecciona una cuenta de las disponibles para recibir tus 50 coins de regalo\n1000\n	1001\n	1002\n	1003");
 
+	function vendercoins(){
+					
+					var vendercins,recibircoins,vendercins2=50;
+					//aqui estamos almacenando 50 coins en la segunda variable ya que la primera sera utilizada para verificar
 
-			if (cuentas>=1000 && cuentas<=1003){
+	vendercins = confirm("Estas a un paso de vender tus 50 Coins.");
+	//aqui reconvertimos de modo que sera eliminado el valor anterior de 50 coins para evitar esto cree un vendercins2 para almacenar
 
-		alert("SU CUENTA ES:\t"+cuentas+"\t Serás redirigido a WhatsApp, ya que necesitamos confirmar tu cuenta.");
-				alert("Se han abonado 50 coins a tu cuenta");
+	if (vendercins==true) {
+		//aqui el usuario dice ok y es dirigido a lo que hay dentro de el if que fue evaluado como verdadero
 
-				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta ) confirmo que ya recibi mis 50 coins";
-		
-}
+					recibircoins = prompt("Tu balance total es de\n"+vendercins2+"\t coins\n cuantos deseas vender (1-50)");
+					//hasta aqui el usuario recibe un balance de sus coins pero tambien tiene una caja desde donde podria vender sus coins a otros usuarios aqui laidea es que le sean retirados de su cuenta he aqui como hacerle	aqui no se retiro el valor de 50 coins que tenia la variable		
+								
+					alert("Confirmar vender:("+recibircoins+")"+"\tcoins, al presionar ok o aceptar aceptas que se enviaran("+recibircoins+")coins, a una de las cuentas en existencia para ser depositados en las misma y se reduciran de tu balance");
 
-	
-else{
+					//aqui estoy incluyendo el operador - que para restar en base a el dato proporcionado desde el prompt que sera la cantidad que sera quitada
 
-	alert("Uffff necesitas elegir una cuenta de las disponibles!!!, click en Recibir coins.");
-
-
-	}
-
-
+                 location.href= "Areadecomprascoin.html";
+					
 
 }
 
-function noregistro(){
+    else{
+    	alert("Entendido. Sigue en la pagina.");
+    }
 
-var mensajes1=1000;
+		}
+		//llave de funcion verdecoins
+		function noregistro(){
 
-	mensajes1 =confirm ("Favor de registrarse para acceder a los cursos.");
+var mensajes1;
 
-    if (mensajes1=true) {
+	mensajes1 =confirm ("Favor de registrarse para acceder a los cursos; es necesario para cambiar tus coins o poder venderlos.");
+
+    if (mensajes1==true) {
     	
               
             
-		alert("SU CUENTA ES:\t"+"\t Serás redirigido a WhatsApp, ya que necesitamos confirmar tu cuenta.");
+		alert("Serás redirigido a WhatsApp, ya que necesitamos confirmar tu cuenta.");
 
-				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Favor de escribir aqui (su numero de la cuenta ) confirmo que ya recibi mis 50 coins";
+				 window.location.href ="https://api.whatsapp.com/send?phone=+523787117904&text=!%20%20%20 %20%20%20%20Requiero registrarme para tomar cursos.";
 
 
     }
     //llave if
 
-}
-//llave funcion
+    else{
+    	alert('Entendido. Sigue en la pagina');
+    }
+    // llave else
 
-//cambiar_coins
-	</script>
+}
+//llave de funcion noregistro
+</script>
 
 
 	<style>
@@ -213,13 +187,13 @@ var mensajes1=1000;
 
  	Los coins son puntos abonados electronicamente a tu cuenta CPEIN. 
 <br>
-<button onclick="informacion()">+informacion</button>
+<button onclick="vendercoins()">Vender mis 50 Coins</button>
 <tr><td align="center"><strong ><br><br> ¿En qué puedo utilizarlos?</strong><br><img src="carrito.png" width="700" height="350"> <br>
 
 	
  	Los puedes utilizar para clases en vivo, o venderlos a otros usuarios.
  	 	<br>
-<button onclick="cambiar_coins()">Recibir coins</button>
+
 
 
    
