@@ -126,19 +126,104 @@ var mensajes1;
          }
 
          }
+         function ingresajs(){
+         	window.location. href= " https://meet.google.com/kgj-sthp-fpj";
+         }
+        //06
+
+    var cronometro;
+//07
+ 
+//08
+    function detenerse()
+//09
+    {
+//10
+        clearInterval(cronometro);
+//11
+    }
+//12
+ 
+//13
+    function carga()
+//14
+    {
+//15
+        contador_s =0;
+//16
+        contador_m =0;
+//17
+        s = document.getElementById("segundos");
+//18
+        m = document.getElementById("minutos");
+//19
+ 
+//20
+        cronometro = setInterval(
+//21
+            function(){
+//22
+                if(contador_s==60)
+//23
+                {
+//24
+                    contador_s=0;
+//25
+                    contador_m++;
+//26
+                    m.innerHTML = contador_m;
+//27
+ 
+//28
+                    if(contador_m==60)
+//29
+                    {
+//30
+                        contador_m=0;
+//31
+                    }
+
+                }
+
+ 
+
+                s.innerHTML = contador_s;
+
+                contador_s++;
+
+            }
+
+            ,1000);
+
+ 
+
+    }
+
 </script>
 
 </head>
 
-<body>
+<body onload="carga()">
 	<div class="container">
 		<picture><img src="./img/logo.png" width="150px" height="50px"></picture>
 		<div class="free-coins">
-			<button onclick="capturar()">
-				Obtener 50 coins de regalo
+			<button onclick="ingresajs()">
+				Ingresa al curso de JavaScript<br>
+				gratuito por tiempo limitado
+
+
+    <p>
+
+        <span id="minutos">0</span>:<span id="segundos">0</span>
+
+    </p>
+
+
 			</button>
 		</div>
 		<br>
+
+  
 
 
       <div id="header" align="right">
@@ -182,6 +267,13 @@ var mensajes1;
 			</picture>
 		</div>
 		
+        <div class="free-coins" align="center">
+			<button  onclick="capturar()">
+				Obtener 50 coins de regalo<br>cambia por dinero
+		
+			</button>
+		</div>
+
 		<!-- About Us -->
 		<div class="aboutUs">
 			<h3 class="hs">Sobre nosotros:</h3>
